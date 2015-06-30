@@ -9,6 +9,7 @@ import java.util.Map;
 
 import ui.UI;
 import bot.HttpHelper;
+import bot.LogIn;
 
 public class TestMain {
 
@@ -22,21 +23,21 @@ public class TestMain {
 		
 		UI ui = new UI();
 		
+	    params.put("channel", "1");
+	    params.put("partNumber", "MJ2T2ZP/A");
+	    params.put("returnURL", "http%3A%2F%2Fstore.apple.com%2Fhk%2Fbuy-watch%2Fapple-watch-sport%3FpreSelect%3Dtrue%26product%3DMJ2T2ZP%2FA%26step%3Ddetail");
+	    params.put("store", "R409");
+	    params.put("eventId", "next");
+//	    
 //	    params.put("channel", "1");
-//	    params.put("partNumber", "MJ2T2ZP/A");
+//	    params.put("partNumber", "MJ2T2LL/A");
 //	    params.put("returnURL", "http%3A%2F%2Fstore.apple.com%2Fhk%2Fbuy-watch%2Fapple-watch-sport%3FpreSelect%3Dtrue%26product%3DMJ2T2ZP%2FA%26step%3Ddetail");
-//	    params.put("store", "R409");
+//	    params.put("store", "R102");
 //	    params.put("eventId", "next");
 	    
-	    params.put("channel", "1");
-	    params.put("partNumber", "MJ2T2LL/A");
-	    params.put("returnURL", "http%3A%2F%2Fstore.apple.com%2Fhk%2Fbuy-watch%2Fapple-watch-sport%3FpreSelect%3Dtrue%26product%3DMJ2T2ZP%2FA%26step%3Ddetail");
-	    params.put("store", "R102");
-	    params.put("eventId", "next");
-	    
-//		LogIn logIn = new LogIn(client);
-////		logIn.getSms("HI");
-//		logIn.prepareLogInPage(params);
+		LogIn logIn = new LogIn(client);
+//		logIn.getSms("HI");
+		logIn.prepareLogInPage(params);
 //		logIn.getCaptcha();
 		
 		 CookieStore cookieStore = client.cookieManager.getCookieStore();
